@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cawtuogd5rong"
+path="res://.godot/imported/The Britons.mp3-5f68e325726b88f3b3c1165f9a6cd735.mp3str"
+
+[deps]
+
+source_file="res://assests/brackeys_platformer_assets/music/The Britons.mp3"
+dest_files=["res://.godot/imported/The Britons.mp3-5f68e325726b88f3b3c1165f9a6cd735.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
