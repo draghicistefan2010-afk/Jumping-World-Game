@@ -1,0 +1,158 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://larchrow_chars/demo_walk.gd" id="1_walk"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/knight.tres" id="2_knight"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/mage.tres" id="3_mage"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/archer.tres" id="4_archer"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/rogue.tres" id="5_rogue"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/villager.tres" id="6_villager"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/merchant.tres" id="7_merchant"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/guard.tres" id="8_guard"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/elder.tres" id="9_elder"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/slime.tres" id="10_slime"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/bat.tres" id="11_bat"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/skeleton.tres" id="12_skeleton"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/goblin.tres" id="13_goblin"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/spider.tres" id="14_spider"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/ghost.tres" id="15_ghost"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/mushroom.tres" id="16_mushroom"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/rat.tres" id="17_rat"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/wolf.tres" id="18_wolf"]
+[ext_resource type="SpriteFrames" path="res://larchrow_chars/spriteframes/golem.tres" id="19_golem"]
+
+[node name="Demo" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="Player" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(130, 100)
+sprite_frames = ExtResource("2_knight")
+animation = &"idle_down"
+autoplay = "idle_down"
+script = ExtResource("1_walk")
+
+[node name="Knight" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24, 24)
+sprite_frames = ExtResource("2_knight")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Mage" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52, 24)
+sprite_frames = ExtResource("3_mage")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Archer" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(80, 24)
+sprite_frames = ExtResource("4_archer")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Rogue" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(108, 24)
+sprite_frames = ExtResource("5_rogue")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Villager" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(136, 24)
+sprite_frames = ExtResource("6_villager")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Merchant" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(164, 24)
+sprite_frames = ExtResource("7_merchant")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Guard" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(192, 24)
+sprite_frames = ExtResource("8_guard")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Elder" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(220, 24)
+sprite_frames = ExtResource("9_elder")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Slime" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(248, 24)
+sprite_frames = ExtResource("10_slime")
+animation = &"move"
+autoplay = "move"
+
+[node name="Bat" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24, 60)
+sprite_frames = ExtResource("11_bat")
+animation = &"move"
+autoplay = "move"
+
+[node name="Skeleton" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52, 60)
+sprite_frames = ExtResource("12_skeleton")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Goblin" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(80, 60)
+sprite_frames = ExtResource("13_goblin")
+animation = &"walk_down"
+autoplay = "walk_down"
+
+[node name="Spider" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(108, 60)
+sprite_frames = ExtResource("14_spider")
+animation = &"move"
+autoplay = "move"
+
+[node name="Ghost" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(136, 60)
+sprite_frames = ExtResource("15_ghost")
+animation = &"move_left"
+autoplay = "move_left"
+
+[node name="Mushroom" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(164, 60)
+sprite_frames = ExtResource("16_mushroom")
+animation = &"move"
+autoplay = "move"
+
+[node name="Rat" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(192, 60)
+sprite_frames = ExtResource("17_rat")
+animation = &"move_left"
+autoplay = "move_left"
+
+[node name="Wolf" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(220, 60)
+sprite_frames = ExtResource("18_wolf")
+animation = &"move_left"
+autoplay = "move_left"
+
+[node name="Golem" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(248, 60)
+sprite_frames = ExtResource("19_golem")
+animation = &"move"
+autoplay = "move"

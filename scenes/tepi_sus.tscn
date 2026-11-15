@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d6dj23pv2ogp"]
+
+[ext_resource type="Texture2D" uid="uid://dlj2im20ytj2o" path="res://assests/brackeys_platformer_assets/sprites/spikes.png" id="1_16x8e"]
+[ext_resource type="PackedScene" uid="uid://cyvf7qj8ptarr" path="res://scenes/area_2d.tscn" id="2_62dvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ryf"]
+atlas = ExtResource("1_16x8e")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iouyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ryf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iouyq"]
+size = Vector2(11.90667, 7.7075524)
+
+[node name="tepi sus" type="Node2D" unique_id=1431504177]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=894806523]
+scale = Vector2(0.096435554, 0.05737305)
+sprite_frames = SubResource("SpriteFrames_iouyq")
+
+[node name="Area2D" parent="." unique_id=667179134 instance=ExtResource("2_62dvk")]
+position = Vector2(-0.99999976, 1.1368684e-13)
+scale = Vector2(0.5859375, 0.4140625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=784324602]
+position = Vector2(1.706666, 4.8301888)
+scale = Vector2(0.9999999, 0.99999833)
+shape = SubResource("RectangleShape2D_iouyq")

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dxhjv1qi7p0l5"]
+
+[ext_resource type="Texture2D" uid="uid://ucdoi4k5crqq" path="res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/Spritesheet/larchrow_chars_combined_16x16.png" id="1_v7a14"]
+[ext_resource type="PackedScene" uid="uid://cyvf7qj8ptarr" path="res://scenes/area_2d.tscn" id="2_n8s04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe0yk"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3n22"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3fcl"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s357"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npf2v"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yycno"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uht6"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjr63"]
+atlas = ExtResource("1_v7a14")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8vpk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe0yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3n22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3fcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s357")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npf2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yycno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uht6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjr63")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iouyq"]
+size = Vector2(14, 16)
+
+[node name="enemy" type="Node2D" unique_id=1086243091]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1098742197]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_k8vpk")
+frame = 2
+frame_progress = 0.8126132
+
+[node name="Area2D" parent="." unique_id=667179134 instance=ExtResource("2_n8s04")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=889242919]
+shape = SubResource("RectangleShape2D_iouyq")

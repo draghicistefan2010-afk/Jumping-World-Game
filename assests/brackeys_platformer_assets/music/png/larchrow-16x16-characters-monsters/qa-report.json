@@ -1,0 +1,128 @@
+{
+ "summary": {
+  "all_passed": true,
+  "characters": 18,
+  "heroes": 8,
+  "monsters": 10,
+  "animations": 122,
+  "frames": 356
+ },
+ "palette_identical_to_pack6_7_8": {
+  "passed": true,
+  "palette_size": 32
+ },
+ "character_counts": {
+  "passed": true,
+  "heroes": 8,
+  "monsters": 10
+ },
+ "palette_respected_all_pngs": {
+  "passed": true,
+  "files": 178,
+  "foreign_colours": 0
+ },
+ "no_semi_transparency_alpha_binary": {
+  "passed": true,
+  "alpha_values": [
+   0,
+   255
+  ]
+ },
+ "transparent_pixels_rgb_zero": {
+  "passed": true
+ },
+ "sheet_grid_16x16_one_row_per_animation": {
+  "passed": true,
+  "bad": [],
+  "combined": [
+   640,
+   288
+  ]
+ },
+ "scaled_3x_is_exact_nearest_neighbour": {
+  "passed": true,
+  "bad": []
+ },
+ "frame_counts_consistent": {
+  "passed": true,
+  "bad": [],
+  "rule": "heroes: idle 2 + walk 4 per direction (down/left/right/up); monsters: idle 2, move/walk 4 in the same directions, hit 1, death 4"
+ },
+ "closed_1px_outline_on_every_frame": {
+  "passed": true,
+  "frames_checked": 356,
+  "bad": [],
+  "rule": "every opaque pixel touching transparency is the outline colour #120e1a"
+ },
+ "no_empty_frames": {
+  "passed": true,
+  "bad": []
+ },
+ "animations_not_static": {
+  "passed": true,
+  "bad": []
+ },
+ "right_is_exact_mirror_of_left": {
+  "passed": true,
+  "bad": []
+ },
+ "png_strips_match_sheets": {
+  "passed": true,
+  "strips": 122,
+  "bad": []
+ },
+ "combined_sheet_matches_per_character_sheets": {
+  "passed": true,
+  "bad": []
+ },
+ "index_csv_matches_json": {
+  "passed": true,
+  "animations": 122,
+  "frames": 356
+ },
+ "characters_distinct": {
+  "passed": true
+ },
+ "godot_files_present": {
+  "passed": true,
+  "tres": 18
+ },
+ "godot_4_3_loads_all_spriteframes_and_demo_scene": {
+  "passed": true,
+  "result": "CHECK spriteframes_ok=18 bad=0 frames=356 demo_sprites=19",
+  "errors": [],
+  "godot": "4.3-stable headless"
+ },
+ "release_files_present": {
+  "passed": true,
+  "missing": [],
+  "screenshots": 4,
+  "character_gifs": 18,
+  "sizes": {
+   "cover_630x500.png": [
+    630,
+    500
+   ],
+   "cover_1280x720.png": [
+    1280,
+    720
+   ],
+   "01_village_heroes_1280x720.png": [
+    1280,
+    720
+   ],
+   "02_monsters_dungeon_1280x720.png": [
+    1280,
+    720
+   ],
+   "03_lineup_1280x720.png": [
+    1280,
+    720
+   ],
+   "04_whats_inside_1280x720.png": [
+    1280,
+    720
+   ]
+  }
+ }
+}

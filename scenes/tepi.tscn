@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dy0ivqme6dbql"]
+
+[ext_resource type="Texture2D" uid="uid://dlj2im20ytj2o" path="res://assests/brackeys_platformer_assets/sprites/spikes.png" id="1_a75xg"]
+[ext_resource type="PackedScene" uid="uid://cyvf7qj8ptarr" path="res://scenes/area_2d.tscn" id="2_fasta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oson5"]
+atlas = ExtResource("1_a75xg")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iouyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oson5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iouyq"]
+size = Vector2(76.80002, 64)
+
+[node name="tepi" type="Node2D" unique_id=118453976]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1365784961]
+texture_filter = 1
+position = Vector2(-0.7147399, 0.4913839)
+rotation = -3.1415927
+scale = Vector2(0.08560043, 0.047330707)
+sprite_frames = SubResource("SpriteFrames_iouyq")
+autoplay = "default"
+frame_progress = 0.80851704
+
+[node name="Area2D" parent="." unique_id=667179134 instance=ExtResource("2_fasta")]
+position = Vector2(-9.536743e-07, 1.04308114e-07)
+rotation = 3.1415925
+scale = Vector2(0.078125, 0.054687493)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=880194288]
+position = Vector2(12.799986, 18.285725)
+scale = Vector2(0.9999997, 1)
+shape = SubResource("RectangleShape2D_iouyq")

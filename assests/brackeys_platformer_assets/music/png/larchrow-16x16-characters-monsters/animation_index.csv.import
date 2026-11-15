@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cl0vjac5pqpcb"
+
+[deps]
+
+files=["res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.group.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.animation.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.action.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.direction.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.frames.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.fps.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.loop.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.sheet.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.row.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.sheet.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.combined.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.combined.translation"]
+
+source_file="res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.csv"
+dest_files=["res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.group.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.animation.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.action.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.direction.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.frames.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.fps.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.loop.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.sheet.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.row.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.sheet.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.combined.translation", "res://assests/brackeys_platformer_assets/music/png/larchrow-16x16-characters-monsters/animation_index.combined.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
