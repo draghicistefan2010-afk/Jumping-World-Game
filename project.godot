@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="joc2"
-run/main_scene="uid://dsciwmrtb2c05"
+run/main_scene="uid://c6bk6fq2004aj"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

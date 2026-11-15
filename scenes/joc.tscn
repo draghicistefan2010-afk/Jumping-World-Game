@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dsciwmrtb2c05"]
 
-[ext_resource type="PackedScene" uid="uid://dwuuta3fgfakx" path="res://scenes/player.tscn" id="1_i4yop"]
+[ext_resource type="Script" uid="uid://b7q1qmxog2602" path="res://scripts/game_manager.gd" id="1_88o6g"]
+[ext_resource type="PackedScene" uid="uid://dwuuta3fgfakx" path="res://player.tscn" id="1_i4yop"]
+[ext_resource type="Script" uid="uid://cakbw1yfbqwpd" path="res://scenes/ui.gd" id="2_atx5g"]
 [ext_resource type="Texture2D" uid="uid://dygm1hjgrxotb" path="res://assests/brackeys_platformer_assets/sprites/world_tileset.png" id="2_fv7qp"]
 [ext_resource type="Texture2D" uid="uid://ckxtkqxlyvqbu" path="res://assests/brackeys_platformer_assets/music/png/00_background.png" id="2_vobf3"]
 [ext_resource type="PackedScene" uid="uid://cyvf7qj8ptarr" path="res://scenes/area_2d.tscn" id="3_fv7qp"]
@@ -8,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce5dkv1b7eux6" path="res://scenes/coin.tscn" id="6_e4583"]
 [ext_resource type="PackedScene" uid="uid://dy0ivqme6dbql" path="res://scenes/tepi.tscn" id="7_7dv62"]
 [ext_resource type="PackedScene" uid="uid://d6dj23pv2ogp" path="res://scenes/tepi_sus.tscn" id="8_f4fte"]
+[ext_resource type="Script" uid="uid://bseffoncreh63" path="res://scenes/win_trigger.gd" id="11_3gn8u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iouyq"]
 radius = 5.0
@@ -185,13 +188,32 @@ sources/0 = SubResource("TileSetAtlasSource_vobf3")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_65kwm"]
 distance = -11.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iouyq"]
+size = Vector2(20, 47)
+
 [node name="joc" type="Node2D" unique_id=1050806187]
 position = Vector2(10, -335)
 
+[node name="GameManager" type="Node" parent="." unique_id=1571386443]
+unique_name_in_owner = true
+script = ExtResource("1_88o6g")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2000543984]
+script = ExtResource("2_atx5g")
+
+[node name="Label" type="Label" parent="UI" unique_id=519662145]
+offset_left = 22.0
+offset_top = 22.0
+offset_right = 111.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 32
+text = "coins:"
+
 [node name="00Background" type="Sprite2D" parent="." unique_id=115111771]
-position = Vector2(3094, 270.00003)
+position = Vector2(3094.9998, 272.00003)
 scale = Vector2(21.365625, 22.305555)
 texture = ExtResource("2_vobf3")
+metadata/_edit_lock_ = true
 
 [node name="tepi" parent="." unique_id=118453976 instance=ExtResource("7_7dv62")]
 position = Vector2(253, -43)
@@ -317,50 +339,60 @@ position = Vector2(4124, -14)
 [node name="tepi sus24" parent="." unique_id=1204570716 instance=ExtResource("8_f4fte")]
 position = Vector2(4140, -13)
 
-[node name="tepi sus4" parent="tepi sus24" unique_id=1992516007 instance=ExtResource("8_f4fte")]
-position = Vector2(-2478, 184)
+[node name="tepi sus7" parent="." unique_id=1266022524 instance=ExtResource("8_f4fte")]
+position = Vector2(2844, 22)
 
-[node name="tepi sus6" parent="tepi sus24" unique_id=1170970477 instance=ExtResource("8_f4fte")]
-position = Vector2(-1535, 100)
+[node name="tepi sus9" parent="." unique_id=1974191904 instance=ExtResource("8_f4fte")]
+position = Vector2(2877, 22)
 
-[node name="tepi sus7" parent="tepi sus24" unique_id=1266022524 instance=ExtResource("8_f4fte")]
-position = Vector2(-1296, 35)
+[node name="tepi sus11" parent="." unique_id=313963611 instance=ExtResource("8_f4fte")]
+position = Vector2(2907, 22)
 
-[node name="tepi sus8" parent="tepi sus24" unique_id=1159067357 instance=ExtResource("8_f4fte")]
-position = Vector2(-1280, 36)
+[node name="tepi sus12" parent="." unique_id=1604202915 instance=ExtResource("8_f4fte")]
+position = Vector2(2972, -9)
 
-[node name="tepi sus9" parent="tepi sus24" unique_id=1974191904 instance=ExtResource("8_f4fte")]
-position = Vector2(-1263, 35)
+[node name="tepi sus10" parent="." unique_id=629461306 instance=ExtResource("8_f4fte")]
+position = Vector2(2891, 22)
 
-[node name="tepi sus10" parent="tepi sus24" unique_id=629461306 instance=ExtResource("8_f4fte")]
-position = Vector2(-1249, 35)
+[node name="tepi sus13" parent="." unique_id=1911541120 instance=ExtResource("8_f4fte")]
+position = Vector2(2987, -10)
 
-[node name="tepi sus11" parent="tepi sus24" unique_id=313963611 instance=ExtResource("8_f4fte")]
-position = Vector2(-1233, 35)
+[node name="tepi sus8" parent="." unique_id=1159067357 instance=ExtResource("8_f4fte")]
+position = Vector2(2860, 23)
 
-[node name="tepi sus12" parent="tepi sus24" unique_id=1604202915 instance=ExtResource("8_f4fte")]
-position = Vector2(-1168, 4)
+[node name="tepi sus6" parent="." unique_id=1170970477 instance=ExtResource("8_f4fte")]
+position = Vector2(2605, 87)
 
-[node name="tepi sus13" parent="tepi sus24" unique_id=1911541120 instance=ExtResource("8_f4fte")]
-position = Vector2(-1153, 3)
+[node name="tepi sus4" parent="." unique_id=1992516007 instance=ExtResource("8_f4fte")]
+position = Vector2(1662, 171)
 
-[node name="tepi sus14" parent="tepi sus24" unique_id=2027890306 instance=ExtResource("8_f4fte")]
-position = Vector2(-992, 66)
+[node name="tepi sus14" parent="." unique_id=2027890306 instance=ExtResource("8_f4fte")]
+position = Vector2(3148, 53)
 
-[node name="tepi sus15" parent="tepi sus24" unique_id=879883478 instance=ExtResource("8_f4fte")]
-position = Vector2(-976, 68)
+[node name="tepi sus16" parent="." unique_id=1434270025 instance=ExtResource("8_f4fte")]
+position = Vector2(3180, 54)
 
-[node name="tepi sus16" parent="tepi sus24" unique_id=1434270025 instance=ExtResource("8_f4fte")]
-position = Vector2(-960, 67)
+[node name="tepi sus28" parent="." unique_id=968017299 instance=ExtResource("8_f4fte")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(4690, -59)
+scale = Vector2(11.29, 1)
 
-[node name="tepi sus17" parent="tepi sus24" unique_id=1392648656 instance=ExtResource("8_f4fte")]
-position = Vector2(-944, 67)
+[node name="tepi sus29" parent="." unique_id=1348193951 instance=ExtResource("8_f4fte")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(5981, -29)
+scale = Vector2(11.29, 1)
 
-[node name="tepi sus18" parent="tepi sus24" unique_id=2066244499 instance=ExtResource("8_f4fte")]
-position = Vector2(-848, 66)
+[node name="tepi sus15" parent="." unique_id=879883478 instance=ExtResource("8_f4fte")]
+position = Vector2(3164, 55)
 
-[node name="tepi sus19" parent="tepi sus24" unique_id=398982054 instance=ExtResource("8_f4fte")]
-position = Vector2(-833, 65)
+[node name="tepi sus19" parent="." unique_id=398982054 instance=ExtResource("8_f4fte")]
+position = Vector2(3307, 52)
+
+[node name="tepi sus17" parent="." unique_id=1392648656 instance=ExtResource("8_f4fte")]
+position = Vector2(3196, 54)
+
+[node name="tepi sus18" parent="." unique_id=2066244499 instance=ExtResource("8_f4fte")]
+position = Vector2(3292, 53)
 
 [node name="tepi sus20" parent="." unique_id=1185858600 instance=ExtResource("8_f4fte")]
 position = Vector2(3323, 53)
@@ -386,12 +418,10 @@ position = Vector2(4172, -13)
 [node name="tepi sus27" parent="." unique_id=1807007890 instance=ExtResource("8_f4fte")]
 position = Vector2(4187, -13)
 
-[node name="coin" parent="." unique_id=2001749467 instance=ExtResource("6_e4583")]
-position = Vector2(175, 38)
-
 [node name="player" parent="." unique_id=163812275 instance=ExtResource("1_i4yop")]
 z_index = 5
-position = Vector2(66, 50)
+position = Vector2(76, 50)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=140054096]
 position = Vector2(0, -6)
@@ -870,3 +900,18 @@ position = Vector2(4951, -86)
 
 [node name="coin153" parent="." unique_id=1692888044 instance=ExtResource("6_e4583")]
 position = Vector2(4987, -87)
+
+[node name="coin" parent="." unique_id=1965015217 instance=ExtResource("6_e4583")]
+position = Vector2(90, 43)
+
+[node name="coin2" parent="." unique_id=2016581422 instance=ExtResource("6_e4583")]
+position = Vector2(123, 46)
+
+[node name="WinTrigger" type="Area2D" parent="." unique_id=1208658755]
+script = ExtResource("11_3gn8u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinTrigger" unique_id=2046742144]
+position = Vector2(6078, -71.5)
+shape = SubResource("RectangleShape2D_iouyq")
+
+[connection signal="body_entered" from="WinTrigger" to="WinTrigger" method="_on_body_entered"]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c6bk6fq2004aj"]
+
+[ext_resource type="Script" uid="uid://dofeun5fqmpky" path="res://scenes/start_screen.gd" id="1_tx5wa"]
+
+[node name="StartScreen" type="ColorRect" unique_id=1419395678]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35000002, 0.48000008, 1, 1)
+script = ExtResource("1_tx5wa")
+
+[node name="Label" type="Label" parent="." unique_id=1935742527]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -172.0
+offset_right = 230.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 23
+theme_override_font_sizes/font_size = 64
+text = "Jumping-World"
+
+[node name="Label2" type="Label" parent="." unique_id=1046202731]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = -22.5
+offset_right = 152.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 23
+theme_override_font_sizes/font_size = 32
+text = "Press Enter to start!"
